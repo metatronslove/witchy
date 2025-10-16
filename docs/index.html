@@ -779,14 +779,14 @@ const translations = {
         "name1-label": "첫 번째 이름",
         "name2-label": "두 번째 이름",
         "emotion-label": "감정 유형",
-        "generate-text": "주문 생성",
-        "generated-spell-title": "생성된 주문", 
+        "generate-text": "주문 생성", 
+        "generated-spell-title": "생성된 주문",
         "copy-text": "주문 복사",
         "spell-library-title": "주문 도서관",
         "disclaimer": "이 주문은 오락 목적으로만 제공됩니다. 항상 책임감 있게 마법을 실천하세요.",
         "notification-text": "주문이 클립보드에 복사되었습니다!",
-        "love": "사랑과 헌신",
-        "passion": "열정과 욕망", 
+        "love": "사랑과 헌신", 
+        "passion": "열정과 욕망",
         "friendship": "우정과 충성",
         "harmony": "조화와 이해",
         "conflict": "갈등과 긴장",
@@ -814,14 +814,14 @@ const translations = {
         "name2-label": "第二个名字",
         "emotion-label": "情感类型",
         "generate-text": "生成咒语",
-        "generated-spell-title": "生成的咒语",
-        "copy-text": "复制咒语", 
+        "generated-spell-title": "生成的咒语", 
+        "copy-text": "复制咒语",
         "spell-library-title": "咒语库",
         "disclaimer": "这些咒语仅用于娱乐目的。请始终负责任地练习巫术。",
         "notification-text": "咒语已复制到剪贴板！",
         "love": "爱与奉献",
-        "passion": "激情与欲望",
-        "friendship": "友谊与忠诚", 
+        "passion": "激情与欲望", 
+        "friendship": "友谊与忠诚",
         "harmony": "和谐与理解",
         "conflict": "冲突与紧张",
         "hate": "仇恨与冷漠",
@@ -887,8 +887,8 @@ const translations = {
         "spell-library-title": "مكتبة التعاويذ",
         "disclaimer": "هذه التعاويذ للأغراض الترفيهية فقط. مارس السحر دائمًا بمسؤولية.",
         "notification-text": "تم نسخ التعويذة إلى الحافظة!",
-        "love": "الحب والتفاني",
-        "passion": "الشغف والرغبة", 
+        "love": "الحب والتفاني", 
+        "passion": "الشغف والرغبة",
         "friendship": "الصداقة والولاء",
         "harmony": "الانسجام والتفاهم",
         "conflict": "الصراع والتوتر",
@@ -976,6 +976,9 @@ const translations = {
     }
 };
 
+// YouTube chat karakter sınırı
+const YOUTUBE_CHAT_LIMIT = 350;
+
 // Create floating crystals with more variety
 function createFloatingCrystals() {
     const container = document.getElementById('crystalsContainer');
@@ -1042,455 +1045,163 @@ const turkicPhrases = [
     "Türk irkinin şanlı tarihi", "Türk'ün aklı gözü kadar keskindir"
 ];
 
-// Enhanced spells database - 72 spells total
+// Enhanced spells database - YouTube uyumlu, emoji totem formatında
 const spells = [
-    // Original spells (20)
+    // Aşk ve İlişki Büyüleri
     {
         name: "Love Totem",
         type: "good",
-        content: "🍷🥂🍯🌟🌟🌟🌟🌙🔥💧⚡🩸🍏🍎🍓🍒🍇🌳🍀🌸🏵🌹🌺🌼🌷U&I👁👁👁👁👁👁🤍❤‍🔥💝💖🧡💛💚💙💜🤗wish🫂Rocks🤗💜💙💚💛🧡💖💝❤‍🔥🖤👁👁👁👁👁👁I&U🌱🌷🌼🌺🌹🏵🌸🍀🌳🍇🍒🍓🍎🍏🍷🥂🍯🌟🌟🌟🌟🌙🔥💧⚡🩸🐉🐉🐉🐉🐉🐉🐉",
-        description: "This totem is designed to attract universal love energy and strengthen existing relationships."
+        content: "🍷🥂🍯🌟🌟🌙🔥💧⚡🍏🍎🍓🍒🌳🌸🏵🌹🌺U&I👁👁👁🤍❤‍🔥💝💖🤗AMOR🫂COR🤗💖💝❤‍🔥🤍👁👁👁I&U🌺🌹🏵🌸🌳🍒🍓🍎🍏🌟🌟🌙🔥💧⚡🐉🐉",
+        description: "Evrensel aşk enerjisini çeken ve mevcut ilişkileri güçlendiren totem."
     },
-    {
-        name: "Abundance & Wealth",
-        type: "good",
-        content: "💰💎🏦🌟🌟🌟🌟🌞🌍🪙🌱🪄📜🍊🍋🍇🥭🍍🌾🍀🪷🏵💐🌻I&WE👁👁👁👁👁👁💚🤑💲💸🟡🟢🔵🟣🟤🤗ABUNDANCE🫂Riches🤗🟤🟣🔵🟢🟡💸💲🤑💚👁👁👁👁👁👁WE&I🌻💐🏵🪷🍀🌾🍍🥭🍇🍋🍊📜🪄🌱🪙🌍🌞🌟🌟🌟🌟🏦💎💰🐉🐉🐉🐉🐉🐉🐉",
-        description: "A powerful spell that attracts material and spiritual abundance, wealth and prosperity."
-    },
-    {
-        name: "Luciferian Invocation",
-        type: "evil",
-        content: "🜔🕯🌑👁‍🗨🕷🕸⚕✡⛧♁🜏🜂🜃🜄 Invoco te, Lucifer! Per nomen draconis, aperi portas! Lux in tenebris, dux tenebrarum, da mihi potestatem! 🌑👁‍🗨🕷🕸⚕✡⛧♁🜏🜂🜃🜄🜔",
-        description: "A powerful invocation to Lucifer, the light bearer, for knowledge and power."
-    },
-    {
-        name: "Archangel Michael Protection",
-        type: "good",
-        content: "⚔️🛡️🌟✨🔱👼🏽 Qui ut Deus? Sancte Michael Archangele, defende nos in proelio! Contra nequitiam et insidias diaboli esto praesidium! ⚔️🛡️🌟✨🔱👼🏽",
-        description: "A prayer to Archangel Michael for protection against evil forces."
-    },
-    {
-        name: "Gök Börü Türkic Bond",
-        type: "good",
-        content: "🐺🦅🌕🏹🗡️🛡️🇹🇷 Tengri biz menen! Göklerde kartal, yerde gök börü! Türk'ün gücü, Türk'ün kaderi! Tüm Türkler bir olsun! 🐺🦅🌕🏹🗡️🛡️🇹🇷",
-        description: "A spell to strengthen the bond between Turkic peoples and invoke ancestral power."
-    },
-    {
-        name: "Hekate's Crossroads Invocation",
-        type: "evil",
-        content: "🔑🌙🐕‍🦺🕯️✝️⛧ Hekate Trivia, domina trivii, te invoco! Per tuas vias obscuras, duc me ad arcana! Da mihi claves ad omnes portas! 🔑🌙🐕‍🦺🕯️✝️⛧",
-        description: "An invocation to Hekate, goddess of crossroads and magic, for guidance and hidden knowledge."
-    },
-    {
-        name: "Wealth Attraction Sigil",
-        type: "good",
-        content: "💰💵💎💼🏦💳🪙🤑 Prosperitas et abundantia! Per potentiam universi, ad me venite omnes divitiae! Fiat! 🌟💫✨🪐🔮🧿💰💵💎💼🏦💳🪙🤑",
-        description: "A sigil to attract wealth and financial opportunities."
-    },
-    {
-        name: "Love Binding Spell",
-        type: "good",
-        content: "❤️🧡💛💚💙💜🤎🖤🤍💕💞💓💗💘💝💟 Two souls, one destiny. Cor meum, cor tuum, semper unum. Nunc et in aeternum! ❤️🧡💛💚💙💜🤎🖤🤍💕💞💓💗💘💝💟",
-        description: "A spell to bind two souls in love and devotion."
-    },
-    {
-        name: "Banishing Negative Energy",
-        type: "good",
-        content: "🛡️⚔️🔮🌞✨🌟 Discede, spiritus maligni! Per lucem et veritatem, vos expello! Hoc loco, pax et protectio regnet! 🛡️⚔️🔮🌞✨🌟",
-        description: "A powerful banishing ritual to remove negative energies and entities."
-    },
-    {
-        name: "Curse of Misfortune",
-        type: "evil",
-        content: "☠️💀🖤🌑👁‍🗨🕸️🕷️ Maledictus sis! Per tenebras aeternas, infortunium et dolor te sequantur! Sicut hic flos arescet, sic tua fortuna evanescat! ☠️💀🖤🌑👁‍🗨🕸️🕷️",
-        description: "A curse to bring misfortune and suffering to your enemy."
-    },
-    {
-        name: "Healing Light Invocation",
-        type: "good",
-        content: "💊🏥🩺🌿🍃🕊️🌈 Lux sanatrix, per corpus fluat! Dolorem mitiga, morbum expelle, sanationem affer! In nomine vitae et lucis! 💊🏥🩺🌿🍃🕊️🌈",
-        description: "An invocation of healing light for physical and emotional restoration."
-    },
-    {
-        name: "Demonic Pact Sigil",
-        type: "evil",
-        content: "⛧🜏🕯🌑👹😈 Per hoc sigillum, pactum facio! Da mihi scientiam et potentiam! Pro anima mea, do tibi quod petis! ⛧🜏🕯🌑👹😈",
-        description: "A sigil for creating a pact with demonic entities for power and knowledge."
-    },
-    {
-        name: "Psychic Vision Enhancement",
-        type: "good",
-        content: "👁️🔮🌙💫🌀🌠 Aperi oculos animae meae! Veritas occultata revelatur! Futura, praeterita, praesentia - omnia video! 👁️🔮🌙💫🌀🌠",
-        description: "A spell to enhance psychic vision and intuitive abilities."
-    },
-    {
-        name: "Vengeance Hex",
-        type: "evil",
-        content: "🗡️⚔️💔🔥🌪️⚡ Sicut me laesisti, sic tu laederis! Malum quod fecisti, ad te revertatur! Per triplicem legem, hoc fiat! 🗡️⚔️💔🔥🌪️⚡",
-        description: "A hex to return harm to someone who has wronged you, following the rule of three."
-    },
-    {
-        name: "Fertility Blessing",
-        type: "good",
-        content: "🌱🌿🌸🌺🍀🪴🐇 Terra mater, da mihi fructum! Sicut haec terra fert fruges, sic meum corpus vitam novam concipiat! 🌱🌿🌸🌺🍀🪴🐇",
-        description: "A blessing for fertility, whether for crops, animals, or human conception."
-    },
-    {
-        name: "Nightmare Induction",
-        type: "evil",
-        content: "🌑👁‍🗨🕯️🛌💀😱 Per regnum somniorum, te invado! Nocte, terrores et pavores te visitent! Somnia tua sint horribilia! 🌑👁‍🗨🕯️🛌💀😱",
-        description: "A spell to send nightmares and disrupt the sleep of your target."
-    },
-    {
-        name: "Luck & Fortune Attraction",
-        type: "good",
-        content: "🍀🤞🎰💰🎲🪄 Fortuna mea bona sit! Casus et sors mihi favent! Omnes viae meae ad prosperitatem ducant! 🍀🤞🎰💰🎲🪄",
-        description: "A spell to attract good luck and favorable circumstances."
-    },
-    {
-        name: "Communication Blockage",
-        type: "evil",
-        content: "🔇🤐🚫📵🕸️ Linguae tuae vincula impono! Verba tua in aere evanescant! Nemo te audiat, nemo te intellegat! 🔇🤐🚫📵🕸️",
-        description: "A spell to block someone's ability to communicate effectively."
-    },
-    {
-        name: "Elemental Balance Invocation",
-        type: "good",
-        content: "🔥🌊💨🌍⚡ Per ignem, aquam, aerem, terram! Elementa, in meo auxilio convenite! Aequilibrium et harmonia in vita mea regnet! 🔥🌊💨🌍⚡",
-        description: "An invocation to balance the four elements within oneself and one's environment."
-    },
-    {
-        name: "Memory Erasure",
-        type: "evil",
-        content: "🧠🌀💭🕰️⌛ Memoriae tuae deleantur! Quod scis, obliviscaris! Quod vidisti, non recordaberis! 🧠🌀💭🕰️⌛",
-        description: "A dangerous spell to erase specific memories from someone's mind."
-    },
-    
-    // New Emoji Totem Spells (20)
     {
         name: "Dileğimin Muradı",
         type: "magic",
-        content: "🌠🌈🔮🌟🌟🌟🌟🌙⭐💫⚡✨🌕🌑🌒🌓🌔U&I👁👁👁👁👁👁💫🌀🌌📿🧿🤗DESIDERIUM🫂Fatum🤗🧿📿🌌🌀💫👁👁👁👁👁👁I&U🌔🌓🌒🌑🌕✨⚡💫⭐🌙🌟🌟🌟🌟🔮🌈🌠🐉🐉🐉🐉🐉🐉🐉",
+        content: "🌠🌈🔮🌟🌟🌙⭐💫⚡🌕🌑🌓🌔U&I👁👁👁💫🌀🌌📿🤗DESIDERIUM🫂FATUM🤗📿🌌🌀💫👁👁👁I&U🌔🌓🌑🌕⚡💫⭐🌙🌟🌟🔮🌈🌠🐉🐉",
         description: "Evrenin sonsuz gücüyle dileklerin gerçekleşmesi için hazırlanmış totem."
-    },
-    {
-        name: "Altın Çağ Zenginliği",
-        type: "good",
-        content: "💰🪙💎🏦🌟🌟🌟🌟🌞🪐🤑💸💳🏆🥇U&I👁👁👁👁👁👁🟡🟠🟢🔵🟣🤗AURUM🫂Opulentia🤗🟣🔵🟢🟠🟡👁👁👁👁👁👁I&U🥇🏆💳💸🤑🪐🌞🌟🌟🌟🌟🏦💎🪙💰🐉🐉🐉🐉🐉🐉🐉",
-        description: "Maddi ve manevi zenginliği çeken güçlü bir altın totemi."
-    },
-    {
-        name: "Kader Bağı",
-        type: "magic",
-        content: "🔗⛓️🕸️🌟🌟🌟🌟🌙🕯️🌀💫⚖️🧵U&I👁👁👁👁👁👁🔮📜🎭🔒🗝️🤗FATUM🫂Destinum🤗🗝️🔒🎭📜🔮👁👁👁👁👁👁I&U🧵⚖️💫🌀🕯️🌙🌟🌟🌟🌟🕸️⛓️🔗🐉🐉🐉🐉🐉🐉🐉",
-        description: "Kaderi birleştiren ve bağları güçlendiren mistik bir totem."
-    },
-    {
-        name: "Bolluk Bereket",
-        type: "good",
-        content: "🌾🍇🍒🌟🌟🌟🌟🌍🌞💧🌱🍎🍊🥭U&I👁👁👁👁👁👁🟢🟡🔴🟠🟣🤗COPIA🫂Abundantia🤗🟣🟠🔴🟡🟢👁👁👁👁👁👁I&U🥭🍊🍎🌱💧🌞🌍🌟🌟🌟🌟🍒🍇🌾🐉🐉🐉🐉🐉🐉🐉",
-        description: "Toprağın ve doğanın bereketini çağıran tarımsal totem."
     },
     {
         name: "Aşkın Işığı",
         type: "good",
-        content: "💖❤️🌟🌟🌟🌟🌙🕯️🔥💫🌈🌹U&I👁👁👁👁👁👁💕💞💓💗💘🤗AMOR🫂Lux🤗💘💗💓💞💕👁👁👁👁👁👁I&U🌹🌈💫🔥🕯️🌙🌟🌟🌟🌟❤️💖🐉🐉🐉🐉🐉🐉🐉",
+        content: "💖❤️🌟🌟🌙🕯️🔥💫🌈🌹U&I👁👁👁💕💞💓💗🤗AMOR🫂LUX🤗💗💓💞💕👁👁👁I&U🌹🌈💫🔥🕯️🌙🌟🌟❤️💖🐉🐉",
         description: "Saf aşk enerjisini ve romantik bağı güçlendiren ışıklı totem."
     },
     {
+        name: "Tutku Ateşi",
+        type: "good",
+        content: "🔥❤️‍🔥🌟🌟🌙💋🥵👄💄U&I👁👁👁🍑🍆💦🌶️🤗PASSIO🫂IGNIS🤗🌶️💦🍆🍑👁👁👁I&U💄👄🥵💋🌙🌟🌟❤️‍🔥🔥🐉🐉",
+        description: "Yakıcı tutku ve cinsel çekim enerjisini harekete geçiren totem."
+    },
+
+    // Zenginlik ve Bolluk Büyüleri
+    {
+        name: "Altın Çağ Zenginliği",
+        type: "good",
+        content: "💰🪙💎🏦🌟🌟🌞🪐💸💳🏆U&I👁👁👁🟡🟠🟢🔵🤗AURUM🫂OPULENTIA🤗🔵🟢🟠🟡👁👁👁I&U🏆💳💸🪐🌞🌟🌟🏦💎🪙💰🐉🐉",
+        description: "Maddi ve manevi zenginliği çeken güçlü bir altın totemi."
+    },
+    {
+        name: "Bolluk Bereket",
+        type: "good",
+        content: "🌾🍇🍒🌟🌟🌍🌞💧🌱🍎🍊U&I👁👁👁🟢🟡🔴🟠🤗COPIA🫂ABUNDANTIA🤗🟠🔴🟡🟢👁👁👁I&U🍊🍎🌱💧🌞🌍🌟🌟🍒🍇🌾🐉🐉",
+        description: "Toprağın ve doğanın bereketini çağıran tarımsal totem."
+    },
+    {
+        name: "Servet Çağrısı",
+        type: "good",
+        content: "💵🏦💎🌟🌟🌙⭐🪙💰U&I👁👁👁🟡🟢🔵🟣🤗FORTUNA🫂DIVITIAE🤗🟣🔵🟢🟡👁👁👁I&U💰🪙⭐🌙🌟🌟💎🏦💵🐉🐉",
+        description: "Maddi servet ve finansal fırsatları çeken güçlü çağrı."
+    },
+
+    // Koruma ve Şifa Büyüleri
+    {
         name: "Koruma Kalkanı",
         type: "good",
-        content: "🛡️⚔️🏰🌟🌟🌟🌟🌙⭐🪐🌀💎🔒U&I👁👁👁👁👁👁🔵🔷🟦🟪⚪🤗TUTELA🫂Praesidium🤗⚪🟪🟦🔷🔵👁👁👁👁👁👁I&U🔒💎🌀🪐⭐🌙🌟🌟🌟🌟🏰⚔️🛡️🐉🐉🐉🐉🐉🐉🐉",
+        content: "🛡️⚔️🏰🌟🌟🌙⭐🪐🌀💎U&I👁👁👁🔵🔷🟦🟪🤗TUTELA🫂PRAESIDIUM🤗🟪🟦🔷🔵👁👁👁I&U💎🌀🪐⭐🌙🌟🌟🏰⚔️🛡️🐉🐉",
         description: "Negatif enerjilere karşı güçlü bir koruma kalkanı oluşturan totem."
     },
     {
         name: "Şifa Pınarı",
         type: "good",
-        content: "💊🏥🌿🌟🌟🌟🌟🌙💧🕊️🌈🍃🌼U&I👁👁👁👁👁👁🟢⚪🔵🟡🟠🤗SANATIO🫂Salus🤗🟠🟡🔵⚪🟢👁👁👁👁👁👁I&U🌼🍃🌈🕊️💧🌙🌟🌟🌟🌟🌿🏥💊🐉🐉🐉🐉🐉🐉🐉",
+        content: "💊🏥🌿🌟🌟🌙💧🕊️🌈🍃U&I👁👁👁🟢⚪🔵🟡🤗SANATIO🫂SALUS🤗🟡🔵⚪🟢👁👁👁I&U🍃🌈🕊️💧🌙🌟🌟🌿🏥💊🐉🐉",
         description: "Fiziksel ve ruhsal şifa için enerji kanallarını açan totem."
     },
     {
-        name: "Bilgelik Yolu",
+        name: "Ruh Temizliği",
         type: "good",
-        content: "📚🦉🔍🌟🌟🌟🌟🌙⭐💡🌀📖🖋️U&I👁👁👁👁👁👁🟣🔮🟪🟦⚫🤗SAPIENTIA🫂Scientia🤗⚫🟦🟪🔮🟣👁👁👁👁👁👁I&U🖋️📖🌀💡⭐🌙🌟🌟🌟🌟🔍🦉📚🐉🐉🐉🐉🐉🐉🐉",
-        description: "Zihinsel berraklık ve bilgelik için hazırlanmış aydınlanma totemi."
+        content: "💧🌊🕊️🌟🌟🌙🌀✨🌈U&I👁👁👁⚪🔵🟦🟪🤗PURIFICATIO🫂ANIMA🤗🟪🟦🔵⚪👁👁👁I&U🌈✨🌀🌙🌟🌟🕊️🌊💧🐉🐉",
+        description: "Ruhsal temizlik ve negatif enerjilerden arınma totemi."
     },
-    {
-        name: "Yıldız Tozu Büyüsü",
-        type: "magic",
-        content: "⭐🌠✨🌟🌟🌟🌟🌙💫🌀🌌🪐🔭U&I👁👁👁👁👁👁⚪🔵🟣🟡🟠🤗ASTRUM🫂Stardust🤗🟠🟡🟣🔵⚪👁👁👁👁👁👁I&U🔭🪐🌌🌀💫🌙🌟🌟🌟🌟✨🌠⭐🐉🐉🐉🐉🐉🐉🐉",
-        description: "Kozmik enerjileri çağıran ve yıldızların gücünü kullanan totem."
-    },
-    {
-        name: "Doğa Ruhları",
-        type: "magic",
-        content: "🌳🍃🌸🌟🌟🌟🌟🌙🌞💧🌊🔥💨U&I👁👁👁👁👁👁🟢🌿🟡🔵🟠🤗NATURA🫂Spiritus🤗🟠🔵🟡🌿🟢👁👁👁👁👁👁I&U💨🔥🌊💧🌞🌙🌟🌟🌟🌟🌸🍃🌳🐉🐉🐉🐉🐉🐉🐉",
-        description: "Doğa ruhlarıyla bağ kurmak ve elementleri dengelemek için totem."
-    },
+
+    // Karanlık ve Güç Büyüleri
     {
         name: "Gece Gücü",
         type: "evil",
-        content: "🌑🕷️🕸️🌟🌟🌟🌟🌙💀⚰️🔮🌚U&I👁👁👁👁👁👁⚫🟤🔴🟣🟢🤗NOX🫂Tenebrae🤗🟢🟣🔴🟤⚫👁👁👁👁👁👁I&U🌚🔮⚰️💀🌙🌟🌟🌟🌟🕸️🕷️🌑🐉🐉🐉🐉🐉🐉🐉",
+        content: "🌑🕷️🕸️🌟🌟🌙💀⚰️🔮U&I👁👁👁⚫🟤🔴🟣🤗NOX🫂TENEBRAE🤗🟣🔴🟤⚫👁👁👁I&U🔮⚰️💀🌙🌟🌟🕸️🕷️🌑🐉🐉",
         description: "Karanlığın gücünü çağıran ve gece enerjilerini kullanan totem."
     },
     {
-        name: "Ateş Dansı",
-        type: "magic",
-        content: "🔥🌋🎆🌟🌟🌟🌟🌙⚡💥🎇🧨U&I👁👁👁👁👁👁🔴🟠🟡⚪🟤🤗IGNIS🫂Flamma🤗🟤⚪🟡🟠🔴👁👁👁👁👁👁I&U🧨🎇💥⚡🌙🌟🌟🌟🌟🎆🌋🔥🐉🐉🐉🐉🐉🐉🐉",
-        description: "Ateş elementinin dönüştürücü gücünü harekete geçiren totem."
+        name: "Gizli Bilgi",
+        type: "evil",
+        content: "🔮🌑📜🌟🌟🌙🕯️🌀🗝️U&I👁👁👁🟣⚫🔴🟤🤗ARCANUM🫂SCIENTIA🤗🟤🔴⚫🟣👁👁👁I&U🗝️🌀🕯️🌙🌟🌟📜🌑🔮🐉🐉",
+        description: "Gizli bilgilere ve saklı gerçeklere ulaşmak için totem."
     },
+
+    // Doğa ve Element Büyüleri
     {
-        name: "Su Aynası",
+        name: "Doğa Ruhları",
         type: "magic",
-        content: "💧🌊🌀🌟🌟🌟🌟🌙🦑🐚🌧️💦U&I👁👁👁👁👁👁🔵🟦⚪🔷🌐🤗AQUA🫂Mare🤗🌐🔷⚪🟦🔵👁👁👁👁👁👁I&U💦🌧️🐚🦑🌙🌟🌟🌟🌟🌀🌊💧🐉🐉🐉🐉🐉🐉🐉",
-        description: "Su elementinin şifalandırıcı ve sezgisel güçlerini açığa çıkaran totem."
-    },
-    {
-        name: "Rüzgar Sözü",
-        type: "magic",
-        content: "💨🌪️🍃🌟🌟🌟🌟🌙☁️🎐🌬️🕊️U&I👁👁👁👁👁👁⚪🌀🟦🟩🟣🤗VENTUS🫂Aer🤗🟣🟩🟦🌀⚪👁👁👁👁👁👁I&U🕊️🌬️🎐☁️🌙🌟🌟🌟🌟🍃🌪️💨🐉🐉🐉🐉🐉🐉🐉",
-        description: "Havanın özgürleştirici ve iletişimsel güçlerini kullanan totem."
-    },
-    {
-        name: "Toprak Dengesi",
-        type: "magic",
-        content: "🌍🪨🏔️🌟🌟🌟🌟🌙🪵🍄🦌🌿U&I👁👁👁👁👁👁🟤🟢🟡🔵🟠🤗TERRA🫂Tellus🤗🟠🔵🟡🟢🟤👁👁👁👁👁👁I&U🌿🦌🍄🪵🌙🌟🌟🌟🌟🏔️🪨🌍🐉🐉🐉🐉🐉🐉🐉",
-        description: "Toprak elementinin stabilite ve bolluk enerjilerini dengeleyen totem."
+        content: "🌳🍃🌸🌟🌟🌙🌞💧🌊🔥U&I👁👁👁🟢🌿🟡🔵🤗NATURA🫂SPIRITUS🤗🔵🟡🌿🟢👁👁👁I&U🔥🌊💧🌞🌙🌟🌟🌸🍃🌳🐉🐉",
+        description: "Doğa ruhlarıyla bağ kurmak ve elementleri dengelemek için totem."
     },
     {
         name: "Ayın Gizemi",
         type: "magic",
-        content: "🌙🌕🌑🌟🌟🌟🌟🌙🌒🌓🌔🌗U&I👁👁👁👁👁👁⚪🔵🟣🟢🟠🤗LUNA🫂Mysterium🤗🟠🟢🟣🔵⚪👁👁👁👁👁👁I&U🌗🌔🌓🌒🌙🌟🌟🌟🌟🌑🌕🌙🐉🐉🐉🐉🐉🐉🐉",
+        content: "🌙🌕🌑🌟🌟🌙🌒🌓🌔U&I👁👁👁⚪🔵🟣🟢🤗LUNA🫂MYSTERIUM🤗🟢🟣🔵⚪👁👁👁I&U🌔🌓🌒🌙🌟🌟🌑🌕🌙🐉🐉",
         description: "Ayın farklı evrelerinin enerjilerini kullanan kadim bir totem."
     },
     {
         name: "Güneş İhtişamı",
         type: "good",
-        content: "☀️🌞🔥🌟🌟🌟🌟🌙⭐💫🏆🥇U&I👁👁👁👁👁👁🟡🟠🔴⚪🟤🤗SOL🫂Gloria🤗🟤⚪🔴🟠🟡👁👁👁👁👁👁I&U🥇🏆💫⭐🌙🌟🌟🌟🌟🔥🌞☀️🐉🐉🐉🐉🐉🐉🐉",
+        content: "☀️🌞🔥🌟🌟🌙⭐💫🏆U&I👁👁👁🟡🟠🔴⚪🤗SOL🫂GLORIA🤗⚪🔴🟠🟡👁👁👁I&U🏆💫⭐🌙🌟🌟🔥🌞☀️🐉🐉",
         description: "Güneşin yaşam verici ve güçlendirici enerjilerini çağıran totem."
     },
+
+    // Türkçü ve Milli Büyüler
     {
-        name: "Ruh Yolculuğu",
-        type: "magic",
-        content: "👁️🌀🌌🌟🌟🌟🌟🌙💫🚀🪐🌠U&I👁👁👁👁👁👁🟣🔮🟪⚫🔵🤗ANIMA🫂Iter🤗🔵⚫🟪🔮🟣👁👁👁👁👁👁I&U🌠🪐🚀💫🌙🌟🌟🌟🌟🌌🌀👁️🐉🐉🐉🐉🐉🐉🐉",
-        description: "Ruhsal yolculuklar ve astral seyahatler için hazırlanmış totem."
+        name: "Gök Börü Türkic Bond",
+        type: "good",
+        content: "🐺🦅🌕🏹🗡️🛡️🇹🇷 Tengri biz menen! Göklerde kartal, yerde gök börü! 🐺🦅🌕🏹🗡️🛡️🇹🇷",
+        description: "Türk milletinin birliği ve gücü için hazırlanmış kutsal totem."
     },
     {
-        name: "Zaman Çarkı",
+        name: "Bozkurt Ruhu",
+        type: "good",
+        content: "🐺🌕🏹🌟🌟🌙🔥⚔️U&I👁👁👁🟤🟠🔴⚪🤗BOZKURT🫂RUH🤗⚪🔴🟠🟤👁👁👁I&U⚔️🔥🌙🌟🌟🏹🌕🐺🐉🐉",
+        description: "Bozkurt ruhunu çağıran ve Türk milletinin gücünü temsil eden totem."
+    },
+
+    // Özel Amaçlı Büyüler
+    {
+        name: "Kader Bağı",
         type: "magic",
-        content: "⏳🕰️🌀🌟🌟🌟🌟🌙⌛📅🕛🕧U&I👁👁👁👁👁👁🟤⚫🔵🟣🟠🤗TEMPUS🫂Rota🤗🟠🟣🔵⚫🟤👁👁👁👁👁👁I&U🕧🕛📅⌛🌙🌟🌟🌟🌟🌀🕰️⏳🐉🐉🐉🐉🐉🐉🐉",
-        description: "Zamanın akışını anlamak ve uyum sağlamak için hazırlanmış totem."
+        content: "🔗⛓️🕸️🌟🌟🌙🕯️🌀⚖️U&I👁👁👁🔮📜🎭🔒🤗FATUM🫂DESTINUM🤗🔒🎭📜🔮👁👁👁I&U⚖️🌀🕯️🌙🌟🌟🕸️⛓️🔗🐉🐉",
+        description: "Kaderi birleştiren ve bağları güçlendiren mistik bir totem."
     },
     {
         name: "Sonsuzluk Halkası",
         type: "magic",
-        content: "♾️⭕🌀🌟🌟🌟🌟🌙💫∞🔁🔄U&I👁👁👁👁👁👁⚪🔵🟣🟢🟠🤗AETERNITAS🫂Infinitum🤗🟠🟢🟣🔵⚪👁👁👁👁👁👁I&U🔄🔁∞💫🌙🌟🌟🌟🌟🌀⭕♾️🐉🐉🐉🐉🐉🐉🐉",
+        content: "♾️⭕🌀🌟🌟🌙💫∞🔄U&I👁👁👁⚪🔵🟣🟢🤗AETERNITAS🫂INFINITUM🤗🟢🟣🔵⚪👁👁👁I&U🔄∞💫🌙🌟🌟🌀⭕♾️🐉🐉",
         description: "Sonsuzluğun ve döngülerin enerjisini kavramak için tasarlanmış totem."
     },
-    
-    // Additional spells to reach 72 total (32 more spells)
     {
-        name: "Moon Goddess Blessing",
-        type: "good",
-        content: "🌙🌕🌑🌟🌟🌟🌟🌙🌒🌓🌔🌗U&I👁👁👁👁👁👁⚪🔵🟣🟢🟠🤗LUNA🫂Dea🤗🟠🟢🟣🔵⚪👁👁👁👁👁👁I&U🌗🌔🌓🌒🌙🌟🌟🌟🌟🌑🌕🌙🐉🐉🐉🐉🐉🐉🐉",
-        description: "A blessing from the Moon Goddess for intuition and feminine power."
-    },
-    {
-        name: "Sun God's Favor",
-        type: "good", 
-        content: "☀️🌞🔥🌟🌟🌟🌟🌙⭐💫🏆🥇U&I👁👁👁👁👁👁🟡🟠🔴⚪🟤🤗SOL🫂Deus🤗🟤⚪🔴🟠🟡👁👁👁👁👁👁I&U🥇🏆💫⭐🌙🌟🌟🌟🌟🔥🌞☀️🐉🐉🐉🐉🐉🐉🐉",
-        description: "Seeking favor from the Sun God for vitality and success."
-    },
-    {
-        name: "Ocean's Depth",
+        name: "Rüya Geçidi",
         type: "magic",
-        content: "🌊🌀💧🌟🌟🌟🌟🌙🦑🐚🌧️💦U&I👁👁👁👁👁👁🔵🟦⚪🔷🌐🤗OCEANUS🫂Profundum🤗🌐🔷⚪🟦🔵👁👁👁👁👁👁I&U💦🌧️🐚🦑🌙🌟🌟🌟🌟🌀🌊💧🐉🐉🐉🐉🐉🐉🐉",
-        description: "Connecting with the deep wisdom of the ocean spirits."
+        content: "💤🌌🌀🌟🌟🌙🛌🌈U&I👁👁👁🟣🔮🟪⚫🤗SOMNIUM🫂PORTA🤗⚫🟪🔮🟣👁👁👁I&U🌈🛌🌙🌟🌟🌀🌌💤🐉🐉",
+        description: "Rüya alemlerine geçiş ve bilinçaltı keşif için totem."
     },
     {
-        name: "Mountain Strength",
-        type: "good",
-        content: "🏔️🗻🌄🌟🌟🌟🌟🌙🪵🍄🦌🌿U&I👁👁👁👁👁👁🟤🟢🟡🔵🟠🤗MONS🫂Robur🤗🟠🔵🟡🟢🟤👁👁👁👁👁👁I&U🌿🦌🍄🪵🌙🌟🌟🌟🌟🌄🗻🏔️🐉🐉🐉🐉🐉🐉🐉",
-        description: "Drawing strength and stability from mountain energies."
-    },
-    {
-        name: "Forest Whispers",
+        name: "Zaman Çarkı",
         type: "magic",
-        content: "🌳🍃🌸🌟🌟🌟🌟🌙🌞💧🌊🔥💨U&I👁👁👁👁👁👁🟢🌿🟡🔵🟠🤗SILVA🫂Susurrus🤗🟠🔵🟡🌿🟢👁👁👁👁👁👁I&U💨🔥🌊💧🌞🌙🌟🌟🌟🌟🌸🍃🌳🐉🐉🐉🐉🐉🐉🐉",
-        description: "Listening to the ancient whispers of the forest spirits."
+        content: "⏳🕰️🌀🌟🌟🌙⌛📅U&I👁👁👁🟤⚫🔵🟣🤗TEMPUS🫂ROTA🤗🟣🔵⚫🟤👁👁👁I&U📅⌛🌙🌟🌟🌀🕰️⏳🐉🐉",
+        description: "Zamanın akışını anlamak ve uyum sağlamak için hazırlanmış totem."
     },
     {
-        name: "Desert Mirage",
-        type: "evil",
-        content: "🏜️🌵🐪🌟🌟🌟🌟🌙💀⚰️🔮🌚U&I👁👁👁👁👁👁🟤🟡⚪🟠🔴🤗DESERTUM🫂Mirage🤗🔴🟠⚪🟡🟤👁👁👁👁👁👁I&U🌚🔮⚰️💀🌙🌟🌟🌟🌟🐪🌵🏜️🐉🐉🐉🐉🐉🐉🐉",
-        description: "Creating illusions and mirages in the desert of reality."
+        name: "Mental Berraklık",
+        type: "good",
+        content: "🧠💡🌟🌟🌟🌙🌀🔮U&I👁👁👁🔵🟣🟪⚫🤗CLARITAS🫂MENTIS🤗⚫🟪🟣🔵👁👁👁I&U🔮🌀🌙🌟🌟🌟💡🧠🐉🐉",
+        description: "Zihinsel berraklık ve odaklanma için hazırlanmış totem."
     },
     {
-        name: "Volcano's Wrath", 
-        type: "evil",
-        content: "🌋🔥💥🌟🌟🌟🌟🌙⚡💥🎇🧨U&I👁👁👁👁👁👁🔴🟠🟡⚪🟤🤗VULCANUS🫂Ira🤗🟤⚪🟡🟠🔴👁👁👁👁👁👁I&U🧨🎇💥⚡🌙🌟🌟🌟🌟💥🔥🌋🐉🐉🐉🐉🐉🐉🐉",
-        description: "Unleashing the destructive power of volcanic energy."
-    },
-    {
-        name: "Arctic Chill",
-        type: "evil",
-        content: "❄️🏔️🌨️🌟🌟🌟🌟🌙💀⚰️🔮🌚U&I👁👁👁👁👁👁⚪🔵🟦🌀🌫️🤗ARCTICUS🫂Frigus🤗🌫️🌀🟦🔵⚪👁👁👁👁👁👁I&U🌚🔮⚰️💀🌙🌟🌟🌟🌟🌨️🏔️❄️🐉🐉🐉🐉🐉🐉🐉",
-        description: "Bringing the freezing cold of the arctic winds."
-    },
-    {
-        name: "Jungle Mystery",
+        name: "Yıldız Tozu Büyüsü",
         type: "magic",
-        content: "🌴🐍🦜🌟🌟🌟🌟🌙🌞💧🌊🔥💨U&I👁👁👁👁👁👁🟢🌿🟡🔵🟠🤗IUNGLA🫂Mysterium🤗🟠🔵🟡🌿🟢👁👁👁👁👁👁I&U💨🔥🌊💧🌞🌙🌟🌟🌟🌟🦜🐍🌴🐉🐉🐉🐉🐉🐉🐉",
-        description: "Exploring the deep mysteries of the jungle spirits."
-    },
-    {
-        name: "Celestial Harmony",
-        type: "good",
-        content: "🌌🔭🌠🌟🌟🌟🌟🌙💫🌀🌌🪐🔭U&I👁👁👁👁👁👁⚪🔵🟣🟡🟠🤗CAELUM🫂Harmonia🤗🟠🟡🟣🔵⚪👁👁👁👁👁👁I&U🔭🪐🌌🌀💫🌙🌟🌟🌟🌟🌠🔭🌌🐉🐉🐉🐉🐉🐉🐉",
-        description: "Aligning with the harmonious energies of the celestial bodies."
-    },
-    {
-        name: "Abyssal Call",
-        type: "evil",
-        content: "🌑🕳️🌀🌟🌟🌟🌟🌙💀⚰️🔮🌚U&I👁👁👁👁👁👁⚫🟤🔴🟣🟢🤗ABYSSUS🫂Vocatio🤗🟢🟣🔴🟤⚫👁👁👁👁👁👁I&U🌚🔮⚰️💀🌙🌟🌟🌟🌟🌀🕳️🌑🐉🐉🐉🐉🐉🐉🐉",
-        description: "Calling upon the ancient powers of the abyss."
-    },
-    {
-        name: "Ethereal Bridge",
-        type: "magic",
-        content: "🌉🌈🌌🌟🌟🌟🌟🌙💫🌀🌌🪐🔭U&I👁👁👁👁👁👁⚪🔵🟣🟡🟠🤗AETHERIUS🫂Pons🤗🟠🟡🟣🔵⚪👁👁👁👁👁👁I&U🔭🪐🌌🌀💫🌙🌟🌟🌟🌟🌌🌈🌉🐉🐉🐉🐉🐉🐉🐉",
-        description: "Building bridges between the physical and spiritual realms."
-    },
-    {
-        name: "Crystal Resonance",
-        type: "good",
-        content: "💎🔮✨🌟🌟🌟🌟🌙⭐💫⚡✨🌕U&I👁👁👁👁👁👁⚪🔵🟣🟡🟠🤗CRYSTALLUS🫂Resonantia🤗🟠🟡🟣🔵⚪👁👁👁👁👁👁I&U🌕✨⚡💫⭐🌙🌟🌟🌟🌟✨🔮💎🐉🐉🐉🐉🐉🐉🐉",
-        description: "Harmonizing with the vibrational frequencies of crystals."
-    },
-    {
-        name: "Shadow Walk",
-        type: "evil",
-        content: "👻🌑🕶️🌟🌟🌟🌟🌙💀⚰️🔮🌚U&I👁👁👁👁👁👁⚫🟤🔴🟣🟢🤗UMBRA🫂Ambulatio🤗🟢🟣🔴🟤⚫👁👁👁👁👁👁I&U🌚🔮⚰️💀🌙🌟🌟🌟🌟🕶️🌑👻🐉🐉🐉🐉🐉🐉🐉",
-        description: "Moving unseen through the shadows and darkness."
-    },
-    {
-        name: "Phoenix Rebirth",
-        type: "good",
-        content: "🔥🦚🌅🌟🌟🌟🌟🌙⭐💫🏆🥇U&I👁👁👁👁👁👁🔴🟠🟡⚪🟤🤗PHOENIX🫂Renatus🤗🟤⚪🟡🟠🔴👁👁👁👁👁👁I&U🥇🏆💫⭐🌙🌟🌟🌟🌟🌅🦚🔥🐉🐉🐉🐉🐉🐉🐉",
-        description: "Embracing the transformative power of rebirth and renewal."
-    },
-    {
-        name: "Dragon's Breath",
-        type: "magic",
-        content: "🐉🔥🌪️🌟🌟🌟🌟🌙⚡💥🎇🧨U&I👁👁👁👁👁👁🔴🟠🟡⚪🟤🤗DRACO🫂Anima🤗🟤⚪🟡🟠🔴👁👁👁👁👁👁I&U🧨🎇💥⚡🌙🌟🌟🌟🌟🌪️🔥🐉🐉🐉🐉🐉🐉🐉",
-        description: "Channeling the primal power of dragon energy."
-    },
-    {
-        name: "Unicorn's Grace",
-        type: "good",
-        content: "🦄🌈🌟🌟🌟🌟🌟🌙⭐💫⚡✨🌕U&I👁👁👁👁👁👁⚪🔵🟣🟡🟠🤗UNICORNIS🫂Gratia🤗🟠🟡🟣🔵⚪👁👁👁👁👁👁I&U🌕✨⚡💫⭐🌙🌟🌟🌟🌟🌟🌈🦄🐉🐉🐉🐉🐉🐉🐉",
-        description: "Receiving the blessed grace and purity of unicorn magic."
-    },
-    {
-        name: "Griffin's Watch",
-        type: "good",
-        content: "🦅🐅🏰🌟🌟🌟🌟🌙⭐🪐🌀💎🔒U&I👁👁👁👁👁👁🟡🟠🔴⚪🟤🤗GRYPHUS🫂Custodia🤗🟤⚪🔴🟠🟡👁👁👁👁👁👁I&U🔒💎🌀🪐⭐🌙🌟🌟🌟🌟🏰🐅🦅🐉🐉🐉🐉🐉🐉🐉",
-        description: "Under the protective watch of the mighty griffin."
-    },
-    {
-        name: "Mermaid's Song",
-        type: "magic",
-        content: "🧜‍♀️🎵🌊🌟🌟🌟🌟🌙🦑🐚🌧️💦U&I👁👁👁👁👁👁🔵🟦⚪🔷🌐🤗SIRENA🫂Cantus🤗🌐🔷⚪🟦🔵👁👁👁👁👁👁I&U💦🌧️🐚🦑🌙🌟🌟🌟🌟🌊🎵🧜‍♀️🐉🐉🐉🐉🐉🐉🐉",
-        description: "Enchanted by the captivating song of the mermaids."
-    },
-    {
-        name: "Centaur's Wisdom",
-        type: "good",
-        content: "🐎🧠🏹🌟🌟🌟🌟🌙⭐💡🌀📖🖋️U&I👁👁👁👁👁👁🟤🟢🟡🔵🟠🤗CENTAURUS🫂Sapientia🤗🟠🔵🟡🟢🟤👁👁👁👁👁👁I&U🖋️📖🌀💡⭐🌙🌟🌟🌟🌟🏹🧠🐎🐉🐉🐉🐉🐉🐉🐉",
-        description: "Learning ancient wisdom from the centaur elders."
-    },
-    {
-        name: "Satyr's Dance",
-        type: "magic",
-        content: "🐐🎶🍇🌟🌟🌟🌟🌙🌞💧🌊🔥💨U&I👁👁👁👁👁👁🟢🌿🟡🔵🟠🤗SATYRUS🫂Saltatio🤗🟠🔵🟡🌿🟢👁👁👁👁👁👁I&U💨🔥🌊💧🌞🌙🌟🌟🌟🌟🍇🎶🐐🐉🐉🐉🐉🐉🐉🐉",
-        description: "Joining the ecstatic dance of the satyrs in the forest."
-    },
-    {
-        name: "Pegasus Flight",
-        type: "good",
-        content: "🦄🐎🌟🌟🌟🌟🌟🌙💫🌀🌌🪐🔭U&I👁👁👁👁👁👁⚪🔵🟣🟡🟠🤗PEGASUS🫂Volatus🤗🟠🟡🟣🔵⚪👁👁👁👁👁👁I&U🔭🪐🌌🌀💫🌙🌟🌟🌟🌟🌟🐎🦄🐉🐉🐉🐉🐉🐉🐉",
-        description: "Soaring through the skies on the wings of Pegasus."
-    },
-    {
-        name: "Chimera's Roar",
-        type: "evil",
-        content: "🦁🐍🐐🌟🌟🌟🌟🌙💀⚰️🔮🌚U&I👁👁👁👁👁👁🔴🟠🟡⚪🟤🤗CHIMAERA🫂Rugitus🤗🟤⚪🟡🟠🔴👁👁👁👁👁👁I&U🌚🔮⚰️💀🌙🌟🌟🌟🌟🐐🐍🦁🐉🐉🐉🐉🐉🐉🐉",
-        description: "Unleashing the terrifying roar of the chimera."
-    },
-    {
-        name: "Sphinx's Riddle",
-        type: "magic",
-        content: "🦁🤔🗝️🌟🌟🌟🌟🌙⭐💡🌀📖🖋️U&I👁👁👁👁👁👁🟤🟢🟡🔵🟠🤗SPHINX🫂Aenigma🤗🟠🔵🟡🟢🟤👁👁👁👁👁👁I&U🖋️📖🌀💡⭐🌙🌟🌟🌟🌟🗝️🤔🦁🐉🐉🐉🐉🐉🐉🐉",
-        description: "Solving the ancient riddles of the sphinx for wisdom."
-    },
-    {
-        name: "Minotaur's Labyrinth",
-        type: "evil",
-        content: "🐮🏛️🌀🌟🌟🌟🌟🌙💀⚰️🔮🌚U&I👁👁👁👁👁👁🟤⚫🔵🟣🟠🤗MINOTAURUS🫂Labyrinthus🤗🟠🟣🔵⚫🟤👁👁👁👁👁👁I&U🌚🔮⚰️💀🌙🌟🌟🌟🌟🌀🏛️🐮🐉🐉🐉🐉🐉🐉🐉",
-        description: "Navigating the complex labyrinth of the minotaur."
-    },
-    {
-        name: "Cerberus Guard",
-        type: "evil",
-        content: "🐕‍🦺👹🚫🌟🌟🌟🌟🌙💀⚰️🔮🌚U&I👁👁👁👁👁👁⚫🟤🔴🟣🟢🤗CERBERUS🫂Custos🤗🟢🟣🔴🟤⚫👁👁👁👁👁👁I&U🌚🔮⚰️💀🌙🌟🌟🌟🌟🚫👹🐕‍🦺🐉🐉🐉🐉🐉🐉🐉",
-        description: "Standing guard with the three-headed hound of the underworld."
-    },
-    {
-        name: "Hydra's Regeneration",
-        type: "evil",
-        content: "🐍🔄💀🌟🌟🌟🌟🌙💀⚰️🔮🌚U&I👁👁👁👁👁👁🟢🟣🔴🟤⚫🤗HYDRA🫂Regeneratio🤗⚫🟤🔴🟣🟢👁👁👁👁👁👁I&U🌚🔮⚰️💀🌙🌟🌟🌟🌟💀🔄🐍🐉🐉🐉🐉🐉🐉🐉",
-        description: "Harnessing the regenerative power of the hydra."
-    },
-    {
-        name: "Gorgon's Gaze",
-        type: "evil",
-        content: "🐍👁️💎🌟🌟🌟🌟🌙💀⚰️🔮🌚U&I👁👁👁👁👁👁🟢⚫🔴🟣🟤🤗GORGON🫂Aspectus🤗🟤🟣🔴⚫🟢👁👁👁👁👁👁I&U🌚🔮⚰️💀🌙🌟🌟🌟🌟💎👁️🐍🐉🐉🐉🐉🐉🐉🐉",
-        description: "Wielding the petrifying gaze of the gorgon."
-    },
-    {
-        name: "Harpy's Screech",
-        type: "evil",
-        content: "🦅👹💨🌟🌟🌟🌟🌙💀⚰️🔮🌚U&I👁👁👁👁👁👁🟡⚫🔴🟣🟤🤗HARPYIA🫂Strider🤗🟤🟣🔴⚫🟡👁👁👁👁👁👁I&U🌚🔮⚰️💀🌙🌟🌟🌟🌟💨👹🦅🐉🐉🐉🐉🐉🐉🐉",
-        description: "Releasing the terrifying screech of the harpies."
-    },
-    {
-        name: "Cyclops Forge",
-        type: "magic",
-        content: "👁️🔨⚒️🌟🌟🌟🌟🌙⭐💫🏆🥇U&I👁👁👁👁👁👁🟤🟢🟡🔵🟠🤗CYCLOPS🫂Fabricatus🤗🟠🔵🟡🟢🟤👁👁👁👁👁👁I&U🥇🏆💫⭐🌙🌟🌟🌟🌟⚒️🔨👁️🐉🐉🐉🐉🐉🐉🐉",
-        description: "Working at the mighty forge of the cyclops."
-    },
-    {
-        name: "Titan's Strength",
-        type: "good",
-        content: "🧔‍♂️🏔️💪🌟🌟🌟🌟🌙⭐💫🏆🥇U&I👁👁👁👁👁👁🟤🟢🟡🔵🟠🤗TITAN🫂Robur🤗🟠🔵🟡🟢🟤👁👁👁👁👁👁I&U🥇🏆💫⭐🌙🌟🌟🌟🌟💪🏔️🧔‍♂️🐉🐉🐉🐉🐉🐉🐉",
-        description: "Channeling the immense strength of the titans."
-    },
-    {
-        name: "Nymph's Blessing",
-        type: "good",
-        content: "🧚‍♀️🌿💧🌟🌟🌟🌟🌙💧🕊️🌈🍃🌼U&I👁👁👁👁👁👁🟢⚪🔵🟡🟠🤗NYMPHA🫂Benedictio🤗🟠🟡🔵⚪🟢👁👁👁👁👁👁I&U🌼🍃🌈🕊️💧🌙🌟🌟🌟🌟💧🌿🧚‍♀️🐉🐉🐉🐉🐉🐉🐉",
-        description: "Receiving the gentle blessing of the nature nymphs."
-    },
-    {
-        name: "Valkyrie's Choice",
-        type: "good",
-        content: "🛡️👩‍🚒⚔️🌟🌟🌟🌟🌙⭐🪐🌀💎🔒U&I👁👁👁👁👁👁⚪🔵🟦🟪🟣🤗VALKYRIA🫂Electio🤗🟣🟪🟦🔵⚪👁👁👁👁👁👁I&U🔒💎🌀🪐⭐🌙🌟🌟🌟🌟⚔️👩‍🚒🛡️🐉🐉🐉🐉🐉🐉🐉",
-        description: "Being chosen by the valkyries for glory in battle."
+        content: "⭐🌠✨🌟🌟🌙💫🌀🌌U&I👁👁👁⚪🔵🟣🟡🤗ASTRUM🫂STARDUST🤗🟡🟣🔵⚪👁👁👁I&U🌌🌀💫🌙🌟🌟✨🌠⭐🐉🐉",
+        description: "Kozmik enerjileri çağıran ve yıldızların gücünü kullanan totem."
     }
 ];
 
-// Enhanced spell generation function
-function generateEnhancedSpell(name1, name2, emotionType) {
+// YouTube uyumlu büyü oluşturma fonksiyonu
+function generateYouTubeSpell(name1, name2, emotionType) {
     if (!name1 || !name2) {
         return getTranslation("Please enter both names.");
     }
@@ -1502,149 +1213,174 @@ function generateEnhancedSpell(name1, name2, emotionType) {
     // Duygu emojilerini al
     const emotionSet = emotionEmojis[emotionType] || emotionEmojis.love;
     
-    // Büyünün uzunluğunu belirle (isimlerin uzunluğuna göre)
-    const baseLength = 180;
-    const nameFactor = (name1.length + name2.length) * 4;
-    const spellLength = baseLength + nameFactor;
-    
+    // YouTube sınırına uygun daha kısa büyü
     let spell = "";
     
-    // Başlangıç emojileri - daha çeşitli
-    const startEmojis = [...otherEmojis, ...unicodeSymbols].slice(0, 8);
-    spell += startEmojis.join("") + "🌟🌟🌟🌟";
+    // Başlangıç emojileri - daha kısa
+    const startEmojis = [...otherEmojis].slice(0, 3);
+    spell += startEmojis.join("") + "🌟";
     
-    // İsimleri ve emojileri karıştırarak ekle
-    let currentLength = spell.length;
+    // İsimleri ve emojileri karıştırarak ekle (daha kısa versiyon)
     let nameToggle = true;
-    let iteration = 0;
+    let iterations = 0;
+    const maxIterations = 6; // YouTube sınırı için daha az iterasyon
     
-    while (currentLength < spellLength) {
+    while (iterations < maxIterations && spell.length < YOUTUBE_CHAT_LIMIT - 50) {
         if (nameToggle) {
             spell += name1;
-            // İsimden sonra emoji ekle
             const randomEmoji = emotionSet[Math.floor(Math.random() * emotionSet.length)];
             spell += randomEmoji;
-            
-            // Bazen diğer emojilerden de ekle
-            if (Math.random() > 0.5) {
-                const randomOther = otherEmojis[Math.floor(Math.random() * otherEmojis.length)];
-                spell += randomOther;
-            }
-            
-            // Bazen Unicode sembol ekle
-            if (Math.random() > 0.6) {
-                const randomSymbol = unicodeSymbols[Math.floor(Math.random() * unicodeSymbols.length)];
-                spell += randomSymbol;
-            }
-            
-            // Bazen Latince ifade ekle (daha kısa)
-            if (Math.random() > 0.85 && iteration < 3) {
-                const randomLatin = latinPhrases[Math.floor(Math.random() * latinPhrases.length)].split(' ')[0];
-                spell += randomLatin;
-                iteration++;
-            }
         } else {
             spell += name2;
-            // İsimden sonra emoji ekle
             const randomEmoji = emotionSet[Math.floor(Math.random() * emotionSet.length)];
             spell += randomEmoji;
-            
-            // Bazen diğer emojilerden de ekle
-            if (Math.random() > 0.5) {
-                const randomOther = otherEmojis[Math.floor(Math.random() * otherEmojis.length)];
-                spell += randomOther;
-            }
         }
         
-        // İsim değişimi
         nameToggle = !nameToggle;
+        iterations++;
         
-        // Bazen isimleri birlikte yaz
-        if (Math.random() > 0.75) {
+        // Bazen isimleri birlikte yaz (daha az sıklıkta)
+        if (Math.random() > 0.8 && iterations < maxIterations - 2) {
             const connector = emotionSet[Math.floor(Math.random() * emotionSet.length)];
             spell += name1 + "&" + name2 + connector;
-            
-            // Bazen ters çevir
-            if (Math.random() > 0.5) {
-                spell += name2 + "&" + name1 + connector;
-            }
-        }
-        
-        // Güncel uzunluğu güncelle
-        currentLength = spell.length;
-        
-        // Uzunluk yeterliyse çık
-        if (currentLength >= spellLength) break;
-        
-        // Bazen emoji grupları ekle
-        if (Math.random() > 0.88) {
-            const emojiGroup = emotionSet.slice(0, 4).join("") + 
-                              unicodeSymbols.slice(0, 3).join("") + 
-                              otherEmojis.slice(0, 3).join("");
-            spell += emojiGroup;
-            currentLength = spell.length;
+            iterations++;
         }
     }
     
-    // Orta kısım için özel desen - geliştirilmiş
-    const middleEmojis = emotionSet.slice(0, 5).join("");
+    // Orta kısım - daha kısa
+    const middleEmojis = emotionSet.slice(0, 3).join("");
     const latinWord1 = latinPhrases[Math.floor(Math.random() * latinPhrases.length)].split(' ')[0];
-    const latinWord2 = latinPhrases[Math.floor(Math.random() * latinPhrases.length)].split(' ')[0];
-    
-    const middlePattern = "👁👁👁👁👁👁" + 
-                         middleEmojis + 
-                         latinWord1 +
-                         "🫂" +
-                         latinWord2 +
-                         middleEmojis +
-                         "👁👁👁👁👁👁";
+    const middlePattern = "👁" + middleEmojis + latinWord1 + "🫂" + middleEmojis + "👁";
     
     // Orta kısmı stratejik olarak yerleştir
     const midPoint = Math.floor(spell.length / 2);
-    spell = spell.substring(0, midPoint - middlePattern.length / 2) + 
-            middlePattern + 
-            spell.substring(midPoint + middlePattern.length / 2);
+    spell = spell.substring(0, midPoint) + middlePattern + spell.substring(midPoint);
     
-    // Türkçü ifadeleri entegre et
+    // Türkçü ifadeleri entegre et (daha kısa)
     if (emotionType === 'turkic') {
-        const turkicPhrase = turkicPhrases[Math.floor(Math.random() * turkicPhrases.length)];
-        const insertPosition = Math.floor(spell.length / 3);
-        spell = spell.substring(0, insertPosition) + turkicPhrase + spell.substring(insertPosition);
+        const turkicWords = turkicPhrases[Math.floor(Math.random() * turkicPhrases.length)].split(' ').slice(0, 2).join(' ');
+        spell = turkicWords + " " + spell;
     }
     
-    // Bayrak ve meslek emojilerini entegre et
-    if (emotionType === 'professional') {
-        const professionEmoji = professionEmojis[Math.floor(Math.random() * professionEmojis.length)];
-        const flagEmoji = flagEmojis[Math.floor(Math.random() * flagEmojis.length)];
-        const insertPosition = Math.floor(spell.length / 4);
-        spell = spell.substring(0, insertPosition) + professionEmoji + flagEmoji + spell.substring(insertPosition);
-        
-        // İkinci bir set ekle
-        const secondProfession = professionEmojis[Math.floor(Math.random() * professionEmojis.length)];
-        const secondFlag = flagEmojis[Math.floor(Math.random() * flagEmojis.length)];
-        const secondPosition = Math.floor(spell.length * 3 / 4);
-        spell = spell.substring(0, secondPosition) + secondProfession + secondFlag + spell.substring(secondPosition);
-    }
+    // Son emojileri ekle - daha kısa
+    const endEmojis = [...otherEmojis].slice(3, 6);
+    spell += "🌟" + endEmojis.join("");
     
-    // Spiritüel bağ için özel elementler
-    if (emotionType === 'spiritual') {
-        const spiritualSymbols = ["🕉️", "☯️", "✡️", "☪️", "🕎", "🔯", "☦️", "🛐"];
-        const spiritualSymbol = spiritualSymbols[Math.floor(Math.random() * spiritualSymbols.length)];
-        const insertPosition = Math.floor(spell.length / 2);
-        spell = spell.substring(0, insertPosition) + spiritualSymbol + spell.substring(insertPosition);
-    }
-    
-    // Son emojileri ekle
-    const endEmojis = [...otherEmojis, ...unicodeSymbols].slice(8, 16);
-    spell += "🌟🌟🌟🌟" + endEmojis.join("");
-    
-    // Ejderha emojileriyle bitir - değişken sayıda
-    const dragonCount = 6 + Math.floor(Math.random() * 8);
+    // Ejderha emojileriyle bitir - daha az sayıda
+    const dragonCount = 2;
     for (let i = 0; i < dragonCount; i++) {
         spell += "🐉";
     }
     
+    // Eğer hala çok uzunsa, kısalt
+    if (spell.length > YOUTUBE_CHAT_LIMIT) {
+        spell = spell.substring(0, YOUTUBE_CHAT_LIMIT - 10) + "✨";
+    }
+    
     return spell;
+}
+
+// Mevcut büyüleri YouTube sınırına uygun hale getir
+function optimizeSpellsForYouTube() {
+    spells.forEach(spell => {
+        // Eğer büyü çok uzunsa, kısalt
+        if (spell.content.length > YOUTUBE_CHAT_LIMIT) {
+            // İlk 300 karakteri al ve sonuna ekleme yap
+            let optimizedContent = spell.content.substring(0, YOUTUBE_CHAT_LIMIT - 10);
+            
+            // Anlamlı bir şekilde bitirmeye çalış
+            if (!optimizedContent.endsWith("🐉") && !optimizedContent.endsWith("✨")) {
+                optimizedContent += "✨";
+            }
+            
+            spell.content = optimizedContent;
+        }
+    });
+}
+
+// Karakter sayısını güncelle
+function updateCharacterCount(text) {
+    const countElement = document.getElementById('characterCount');
+    const count = text.length;
+    
+    countElement.textContent = `Characters: ${count}`;
+    
+    if (count > YOUTUBE_CHAT_LIMIT) {
+        countElement.classList.add('warning');
+        countElement.innerHTML = `Characters: ${count} <i class="fas fa-exclamation-triangle"></i> (YouTube limit exceeded!)`;
+    } else {
+        countElement.classList.remove('warning');
+    }
+}
+
+// Büyüleri yükle (YouTube optimize edilmiş)
+function loadSpells() {
+    // Önce büyüleri optimize et
+    optimizeSpellsForYouTube();
+    
+    const spellsContainer = document.getElementById('spellsContainer');
+    spellsContainer.innerHTML = '';
+    
+    spells.forEach((spell, index) => {
+        const spellCard = document.createElement('div');
+        spellCard.className = `spell-card ${spell.type} fade-in`;
+        spellCard.style.animationDelay = `${index * 0.05}s`;
+        
+        // Karakter sayısını göster
+        const charCount = spell.content.length;
+        const countDisplay = charCount > YOUTUBE_CHAT_LIMIT ? 
+            `<span style="color: var(--evil)">${charCount} (Too long!)</span>` : 
+            charCount;
+        
+        spellCard.innerHTML = `
+            <h3 class="spell-name">${spell.name}</h3>
+            <span class="spell-type type-${spell.type}">${spell.type === 'good' ? getTranslation('Good') : spell.type === 'evil' ? getTranslation('Evil') : getTranslation('Magic')}</span>
+            <div class="spell-content">${spell.content}</div>
+            <div class="character-count">Characters: ${countDisplay}</div>
+            <p class="spell-description">${spell.description}</p>
+            <button class="copy-btn" data-spell="${spell.content.replace(/"/g, '&quot;')}"><i class="fas fa-copy"></i> ${getTranslation('copy-text')}</button>
+        `;
+        
+        spellsContainer.appendChild(spellCard);
+    });
+    
+    // Kopyalama butonları için olay dinleyicilerini ekle
+    document.querySelectorAll('.spell-card .copy-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            const spellContent = this.getAttribute('data-spell');
+            copyToClipboard(spellContent, this);
+        });
+    });
+}
+
+// Panoya kopyalama fonksiyonu
+function copyToClipboard(text, buttonElement = null) {
+    navigator.clipboard.writeText(text).then(() => {
+        // Buton stilini değiştir
+        if (buttonElement) {
+            buttonElement.innerHTML = '<i class="fas fa-check"></i> ' + getTranslation('Copied!');
+            buttonElement.classList.add('copied');
+            
+            // 2 saniye sonra butonu eski haline getir
+            setTimeout(() => {
+                buttonElement.innerHTML = '<i class="fas fa-copy"></i> ' + getTranslation('copy-text');
+                buttonElement.classList.remove('copied');
+            }, 2000);
+        }
+        
+        // Bildirimi göster
+        const notification = document.getElementById('notification');
+        document.getElementById('notification-text').textContent = getTranslation('notification-text');
+        notification.classList.add('show');
+        
+        // 2 saniye sonra bildirimi gizle
+        setTimeout(() => {
+            notification.classList.remove('show');
+        }, 2000);
+    }).catch(err => {
+        console.error('Kopyalama başarısız: ', err);
+        alert(getTranslation('Copy failed. Please copy manually.'));
+    });
 }
 
 // Dil güncelleme fonksiyonu
@@ -1732,57 +1468,6 @@ function getTranslation(key) {
     return translations[lang] && translations[lang][key] ? translations[lang][key] : key;
 }
 
-// Büyüleri yükle
-function loadSpells() {
-    const spellsContainer = document.getElementById('spellsContainer');
-    spellsContainer.innerHTML = '';
-    
-    spells.forEach((spell, index) => {
-        const spellCard = document.createElement('div');
-        spellCard.className = `spell-card ${spell.type} fade-in`;
-        spellCard.style.animationDelay = `${index * 0.05}s`;
-        
-        spellCard.innerHTML = `
-            <h3 class="spell-name">${spell.name}</h3>
-            <span class="spell-type type-${spell.type}">${spell.type === 'good' ? getTranslation('Good') : spell.type === 'evil' ? getTranslation('Evil') : getTranslation('Magic')}</span>
-            <div class="spell-content">${spell.content}</div>
-            <p class="spell-description">${spell.description}</p>
-            <button class="copy-btn" data-spell="${spell.content.replace(/"/g, '&quot;')}"><i class="fas fa-copy"></i> ${getTranslation('copy-text')}</button>
-        `;
-        
-        spellsContainer.appendChild(spellCard);
-    });
-    
-    // Kopyalama butonları için olay dinleyicilerini ekle
-    document.querySelectorAll('.spell-card .copy-btn').forEach(button => {
-        button.addEventListener('click', function() {
-            const spellContent = this.getAttribute('data-spell');
-            
-            // Panoya kopyala
-            navigator.clipboard.writeText(spellContent).then(() => {
-                // Buton stilini değiştir
-                this.innerHTML = '<i class="fas fa-check"></i> ' + getTranslation('Copied!');
-                this.classList.add('copied');
-                
-                // Bildirimi göster
-                const notification = document.getElementById('notification');
-                notification.textContent = getTranslation('notification-text');
-                notification.classList.add('show');
-                
-                // 2 saniye sonra butonu ve bildirimi eski haline getir
-                setTimeout(() => {
-                    this.innerHTML = '<i class="fas fa-copy"></i> ' + getTranslation('copy-text');
-                    this.classList.remove('copied');
-                    notification.classList.remove('show');
-                }, 2000);
-            }).catch(err => {
-                console.error('Kopyalama başarısız: ', err);
-                alert(getTranslation('Copy failed. Please copy manually.'));
-            });
-        });
-    });
-}
-
 // Sayfa yüklendiğinde
 document.addEventListener('DOMContentLoaded', function() {
     // Uçan kristalleri oluştur
@@ -1803,7 +1488,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('name1').value = savedName1;
     document.getElementById('name2').value = savedName2;
     
-    // Büyüleri yükle
+    // Büyüleri yükle (YouTube optimize edilmiş)
     loadSpells();
     
     // Olay dinleyicilerini ekle
@@ -1833,8 +1518,12 @@ document.addEventListener('DOMContentLoaded', function() {
         setCookie('name1', name1, 30);
         setCookie('name2', name2, 30);
         
-        const spell = generateEnhancedSpell(name1, name2, emotionType);
+        // YouTube uyumlu büyü oluştur
+        const spell = generateYouTubeSpell(name1, name2, emotionType);
         document.getElementById('spellResult').textContent = spell;
+        
+        // Karakter sayısını güncelle
+        updateCharacterCount(spell);
         
         // Animasyon efekti
         const resultElement = document.getElementById('spellResult');
@@ -1845,29 +1534,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     document.getElementById('copyBtn').addEventListener('click', function() {
         const spellContent = document.getElementById('spellResult').textContent;
-        
-        // Panoya kopyala
-        navigator.clipboard.writeText(spellContent).then(() => {
-            // Buton stilini değiştir
-            this.innerHTML = '<i class="fas fa-check"></i> ' + getTranslation('Copied!');
-            this.classList.add('copied');
-            
-            // Bildirimi göster
-            const notification = document.getElementById('notification');
-            notification.textContent = getTranslation('notification-text');
-            notification.classList.add('show');
-            
-            // 2 saniye sonra butonu ve bildirimi eski haline getir
-            setTimeout(() => {
-                this.innerHTML = '<i class="fas fa-copy"></i> ' + getTranslation('copy-text');
-                this.classList.remove('copied');
-                notification.classList.remove('show');
-            }, 2000);
-        }).catch(err => {
-            console.error('Kopyalama başarısız: ', err);
-            alert(getTranslation('Copy failed. Please copy manually.'));
-        });
+        copyToClipboard(spellContent, this);
     });
+    
+    // Başlangıçta karakter sayısını güncelle
+    updateCharacterCount(document.getElementById('spellResult').textContent);
     
     // Koyu/açık tema kontrolü
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
